@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Outcome } from '../models/Outcome';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,12 @@ import { Injectable } from '@angular/core';
 export class OutcomeService {
 
   constructor(private http:HttpClient) { }
-  Url='https://app-saver-api.herokuapp.com/'
+  Url='https://app-saver-api.herokuapp.com/outcomes'
 
-  getGastos(){};
-  //TODO:ET 2
+  getOutcomes(){
+    return this.http.get<Outcome[]>(this.Url);
+  };
+  saveOutcomes(outcome:Outcome){
+    return this.http.post(this.Url,outcome);
+  }
 }
