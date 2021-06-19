@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { OutcomeComponent } from './components/outcome/outcome.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'outcomes',component:OutcomeComponent}
+  {path:'outcomes',component:OutcomeComponent},
+  {path:'outcomes/create',component:RegisterComponent}
 ];
 
 @NgModule({

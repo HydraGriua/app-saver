@@ -1,7 +1,7 @@
 <div class="content">
     <h1>S/. {{total}}</h1>
     <h2>el total de los pagos registrados</h2>
-    <button mat-raised-button color="primary">Registrar un nuevo gasto</button>
+    <button mat-raised-button color="primary" routerLink="/outcomes/create" routerLinkActive="active">Registrar un nuevo gasto</button>
       <div fxFlex="25%" *ngFor="let outcome of outcomes">
         <mat-card class="mat-elevation-z4" >
           <mat-card-header>

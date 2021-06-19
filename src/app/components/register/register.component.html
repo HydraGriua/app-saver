@@ -1,0 +1,21 @@
+<div class="content">
+    <h1 class="Titulo">Registrar un nuevo gasto</h1>
+    <h2>Desde aqui se podra registrar un nuevo gasto</h2>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>aea</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form (submit)="onSubmit()" #outcomeForm="ngForm">
+                <mat-form-field>
+                  <input matInput placeholder="Monto" name="amount" type="number" required [(ngModel)]="outcomeData.amount">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Detalle" name="detail" required [(ngModel)]="outcomeData.detail">
+                </mat-form-field>
+                <button mat-button color="primary">Add</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+    
+</div>
